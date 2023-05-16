@@ -1,6 +1,6 @@
 module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 7.0"
+    source  = "alberto-martinez-zurita/network/google"
+    version = "~> 3.4.0"
 
 
     project_id   = "gaurav-network"
@@ -15,16 +15,6 @@ module "vpc" {
   }
 ]
 
-    secondary_ranges = {
-        subnet-01 = [
-            {
-                range_name    = "subnet-01-secondary-01"
-                ip_cidr_range = "192.168.64.0/24"
-            },
-        ]
-
-        subnet-02 = []
-    }
 
     routes = [
         {
