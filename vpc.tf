@@ -1,10 +1,10 @@
 module "vpc" {
     source  = "alberto-martinez-zurita/network/google"
-    version = "~> 3.4.0"
+    version = "3.4.0"
 
 
     project_id   = "gaurav-network"
-    network_name = "var.project"
+    network_name = var.project
     routing_mode = "GLOBAL"
 
    subnets = [
