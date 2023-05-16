@@ -50,9 +50,8 @@ resource "google_compute_instance" "hashicat" {
   name         = "${var.prefix}-hashicat"
   zone         = "${var.region}-b"
   machine_type = var.machine_type
-  department   = "devops"
-  billable     = "true"
-
+billable =true
+department ="devops"
   boot_disk {
     initialize_params {
       image = "ubuntu-os-cloud/ubuntu-2204-lts"
